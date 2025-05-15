@@ -1,0 +1,210 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #121212;
+  color: #e0e0e0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+  transition: background-color 0.4s, color 0.4s;
+  min-height: 100vh;
+}
+
+body.light-theme {
+  background-color: #f0f0f0;
+  color: #222;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  font-weight: 900;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+nav a,
+nav button {
+  color: #bb86fc;
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-decoration: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+nav a.active,
+nav a:hover,
+nav button:hover {
+  background-color: #bb86fc;
+  color: #121212;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#profile-pic {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  animation: tremble 2s infinite;
+  border: 4px solid #bb86fc;
+}
+
+@keyframes tremble {
+  0%, 100% { transform: rotate(0deg); }
+  20% { transform: rotate(2deg); }
+  40% { transform: rotate(-2deg); }
+  60% { transform: rotate(1deg); }
+  80% { transform: rotate(-1deg); }
+}
+
+.typing-line {
+  font-size: 1.6rem;
+  font-weight: 700;
+  font-style: italic;
+  margin-bottom: 10px;
+  min-height: 36px;
+  white-space: pre-wrap;
+}
+
+.tagline {
+  color: #bb86fc;
+}
+
+.collapsible-section {
+  margin-bottom: 30px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.collapsible-header {
+  background-color: #222;
+  padding: 15px 20px;
+  border-radius: 8px;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #bb86fc;
+  cursor: pointer;
+  user-select: none;
+  outline-offset: 3px;
+  outline-color: transparent;
+  transition: background-color 0.3s, outline-color 0.3s;
+}
+
+.collapsible-header:focus {
+  outline: 3px solid #bb86fc;
+}
+
+.collapsible-header.active,
+.collapsible-header:hover {
+  background-color: #bb86fc;
+  color: #121212;
+}
+
+.section-content {
+  margin-top: 12px;
+  font-size: 1.3rem;
+  white-space: pre-line;
+  min-height: 80px;
+  color: #ddd;
+  line-height: 1.4;
+}
+
+.section-content a {
+  color: #bb86fc;
+  text-decoration: underline;
+}
+
+.skill {
+  margin: 15px 0;
+}
+
+.skill label {
+  font-weight: 700;
+  font-size: 1.2rem;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.skill-bar {
+  background-color: #333;
+  height: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.skill-level {
+  background-color: #bb86fc;
+  height: 100%;
+  width: 0;
+  color: #121212;
+  font-weight: 700;
+  padding-left: 8px;
+  line-height: 20px;
+  transition: width 1.5s ease;
+  border-radius: 12px 0 0 12px;
+  white-space: nowrap;
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 1rem;
+  color: #777;
+}
+
+/* Light theme overrides */
+body.light-theme header,
+body.light-theme nav a,
+body.light-theme nav button,
+body.light-theme .collapsible-header {
+  color: #6200ee;
+  background-color: #e0e0e0;
+}
+
+body.light-theme .collapsible-header.active,
+body.light-theme nav a.active,
+body.light-theme nav a:hover,
+body.light-theme nav button:hover {
+  background-color: #6200ee;
+  color: #f0f0f0;
+}
+
+body.light-theme #profile-pic {
+  border-color: #6200ee;
+}
+
+body.light-theme .skill-bar {
+  background-color: #bbb;
+}
+
+body.light-theme .skill-level {
+  background-color: #6200ee;
+  color: #fff;
+}

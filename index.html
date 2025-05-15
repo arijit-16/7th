@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Arijit Pal Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Hi, I'm <span id="typed-name"></span></h1>
+    <nav>
+      <a href="#about" class="nav-link active">About</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#contact" class="nav-link">Contact</a>
+      <button id="themeToggle" aria-label="Toggle theme">🌙</button>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <img
+      id="profile-pic"
+      src="https://res.cloudinary.com/dirvdnudn/image/upload/v1747285184/new_pic_irvxi8.jpg"
+      alt="Arijit Pal"
+    />
+    <div class="typing-line tagline">
+      <span id="typed-tagline"></span>
+    </div>
+  </section>
+
+  <section id="about" class="collapsible-section">
+    <div tabindex="0" class="collapsible-header nav-link" role="button" aria-expanded="true" aria-controls="about-content">About Me</div>
+    <div class="section-content" id="about-content"></div>
+  </section>
+
+  <section id="projects" class="collapsible-section">
+    <div tabindex="0" class="collapsible-header nav-link" role="button" aria-expanded="false" aria-controls="projects-content">Projects</div>
+    <div class="section-content" id="projects-content"></div>
+  </section>
+
+  <section id="skills" class="collapsible-section">
+    <div tabindex="0" class="collapsible-header nav-link" role="button" aria-expanded="false" aria-controls="skills-content">Skills</div>
+    <div class="section-content" id="skills-content"></div>
+  </section>
+
+  <section id="contact" class="collapsible-section">
+    <div tabindex="0" class="collapsible-header nav-link" role="button" aria-expanded="false" aria-controls="contact-content">Contact</div>
+    <div class="section-content" id="contact-content"></div>
+  </section>
+
+  <footer>
+    &copy; 2025 Arijit Pal. All rights reserved.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
